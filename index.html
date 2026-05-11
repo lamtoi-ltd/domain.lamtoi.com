@@ -78,7 +78,7 @@
 <script>
     // Domain label comes from the `name` query param, e.g. ?name=cauhoi.vn
     (() => {
-        const domain = new URLSearchParams(window.location.search).get('name') ?? '';
+        const domain = new URLSearchParams(window.location.search).get('name')?.replace('/', '') ?? '';
         document.getElementById('domain-display').innerText = domain || 'Thiếu tham số name';
     })();
 </script>
